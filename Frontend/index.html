@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sidra Islam | Creative Developer Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button class="scroll-to-top" aria-label="Scroll to top">▲</button>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">
+    <i class="fas fa-code"></i>
+    Sidra <span>Islam</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#home" class="nav-link">Home</a></li>
+    <li><a href="#about" class="nav-link">About</a></li>
+    <li><a href="#skills" class="nav-link">Skills</a></li>
+    <li><a href="#projects" class="nav-link">Projects</a></li>
+    <li><a href="#certifications" class="nav-link">Certifications</a></li>
+    <li><a href="#contact" class="nav-link">Contact</a></li>
+  </ul>
+  <button class="theme-toggle" aria-label="Toggle theme">
+    <i class="fas fa-sun"></i>
+  </button>
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="stars"></div>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  
+
+  <div class="hero-content">
+    <h1 class="hero-title">
+      I design & build <span class="gradient-text">Creative Web apps/ Games</span>
+    </h1>
+    <p class="hero-typed"><span id="typed-text"></span><span class="typed-cursor">|</span></p>
+    <p class="hero-subtitle">BSc Creative Computing | UI/UX • Web • Mobile • Games</p>
+    <p class="hero-desc">Crafting beautiful, interactive digital experiences</p>
+
+    <div class="hero-buttons">
+      <a href="#projects" class="btn btn-primary">
+        <span>View My Work</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+      <a href="#contact" class="btn btn-secondary">
+        <span>Get In Touch</span>
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="resume.pdf" class="btn btn-download" download>
+        <span>Download Resume</span>
+        <i class="fas fa-download"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section about-section">
+  <div class="parallax-bg" data-parallax="0.5"></div>
+  <div class="section-content">
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about-content">
+      <div class="about-image">
+        <img src="portfolio.jpeg" alt="Sidra Islam">
+        <div class="image-border"></div>
+      </div>
+
+      <div class="about-text-section">
+        <div class="about-text">
+          <p>Hi, I’m Sidra — a Creative Computing student at Bath Spa University RAK who enjoys bringing ideas to life through technology.</p>
+          <p>For me, coding isn’t just about writing lines of code; it’s about creating experiences. I love designing interactive websites, experimenting with Android apps, and building small games that combine creativity with problem-solving.</p>
+          <p>I’m always exploring new tools, learning new skills, and turning curiosity into projects that are both fun and meaningful.</p>
+        </div>
+
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-number">2+</div>
+            <div class="stat-label">Years Learning</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">8+</div>
+            <div class="stat-label">Projects</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Passionate</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section skills-section">
+  <div class="section-content">
+    <h2 class="section-title">Skills & Expertise</h2>
+
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-palette"></i></div>
+        <h3>UI/UX Design</h3>
+        <p>Creating intuitive and beautiful user interfaces</p>
+        <div class="skill-progress" data-skill="90"></div>
+        <div class="tech-tags"><span>Figma</span><span>Adobe XD</span></div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-code"></i></div>
+        <h3>Web Development</h3>
+        <p>Building responsive and interactive web apps</p>
+        <div class="skill-progress" data-skill="85"></div>
+        <div class="tech-tags"><span>HTML/CSS</span><span>JavaScript</span><span>React</span></div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+        <h3>Mobile Apps</h3>
+        <p>Native Android and iOS development</p>
+        <div class="skill-progress" data-skill="80"></div>
+        <div class="tech-tags"><span>Android Studio</span><span>Swift</span></div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-gamepad"></i></div>
+        <h3>Game Development</h3>
+        <p>Creating engaging 2D games</p>
+        <div class="skill-progress" data-skill="75"></div>
+        <div class="tech-tags"><span>Unity</span><span>C#</span></div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+        <h3>Full Stack</h3>
+        <p>End-to-end application development</p>
+        <div class="skill-progress" data-skill="80"></div>
+        <div class="tech-tags"><span>Node.js</span><span>Firebase</span></div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-bezier-curve"></i></div>
+        <h3>Animation</h3>
+        <p>Smooth interactions and motion design</p>
+        <div class="skill-progress" data-skill="85"></div>
+        <div class="tech-tags"><span>CSS</span><span>JavaScript</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section projects-section">
+  <div class="section-content">
+    <h2 class="section-title">Featured Projects</h2>
+    <p class="section-subtitle">Explore my creative work and passion projects</p>
+
+    <div class="projects-grid">
+
+      <!-- Forest Adventure -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="ForestAdventure.png" alt="Forest Adventure">
+          <div class="project-overlay">
+            <a href="https://sidraislam.itch.io/forest-adventure" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>Forest Adventure</h3>
+          <p>Forest Adventure is a 2D adventure game developed in Unity where players navigate through a forest environment, collect gems, solve puzzles, and avoid enemies to survive. The game focuses on exploration and interactive gameplay mechanics. This project demonstrates skills in Unity game development, level design, and basic game logic implementation.</p>
+          <div class="project-tags">
+            <span class="tag">Unity</span>
+            <span class="tag">C#</span>
+            <span class="tag">Game Dev</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wanderlust Wheel App -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="wander.png" alt="Wanderlust Wheel App">
+          <div class="project-overlay">
+            <a href="https://www.youtube.com/watch?v=rmPqyyoW2Y8" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>Wanderlust Wheel Mobile App</h3>
+          <p>Wanderlust Wheel is a creative Android application developed in Android Studio that generates fun travel destination suggestions instead of performing numerical calculations. Users interact with the app to receive fantasy travel recommendations based on different choices. The project demonstrates Android development skills, UI design, and creative app concept implementation.</p>
+          <div class="project-tags">
+            <span class="tag">Android</span>
+            <span class="tag">Java</span>
+            <span class="tag">Firebase</span>
+          </div>
+        </div>
+      </div>
+
+       <!-- Art Explorer Web App -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="art.png" alt="Art Explorer Web App">
+          <div class="project-overlay">
+            <a href="https://myartwebsite.vercel.app/" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>Art Explorer Web App</h3>
+          <p>Art Explorer is a full-stack web application that allows users to explore famous artworks from museums like the Harvard Art Museums and the Metropolitan Museum of Art through API integration. The platform includes secure user authentication, a dynamic art gallery, and a responsive interface built with HTML, CSS, JavaScript, Node.js, Express, and MongoDB. It demonstrates skills in full-stack development, API integration, and user-focused web design.</p>
+          <div class="project-tags">
+            <span class="tag">Html</span>
+            <span class="tag">Css</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Node.js</span>
+          </div>
+        </div>
+      </div>
+
+       <!-- Manzoor Foodstuff -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="manzoor.png" alt="Manzoor Foodstuff Website">
+          <div class="project-overlay">
+            <a href="https://manzoor.netlify.app/" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>Manzoor Foodstuff Website</h3>
+          <p>Manzoor Foodstuff is a responsive website for a local food business, showcasing their products and services. The site features a modern design, easy navigation, and a contact form for customer inquiries. Built with HTML, CSS, and JavaScript, it provides a seamless user experience across all devices.</p>
+          <div class="project-tags">
+            <span class="tag">Html</span>
+            <span class="tag">Css</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </div>
+      </div>
+
+       <!-- Food Ordering Mobile App -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="eatzy.png" alt="Food Ordering Mobile App">
+          <div class="project-overlay">
+            <a href="https://www.youtube.com/watch?v=PSB_Wx4ewww" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>Food Ordering Mobile App</h3>
+          <p>Food Ordering Mobile App is a cross-platform mobile application that allows users to browse menus, place orders, and track their deliveries. The app features a modern UI, smooth animations, and seamless integration with backend services. Built with React Native, it provides a consistent user experience across iOS and Android devices.</p>
+          <div class="project-tags">
+            <span class="tag">Android</span>
+            <span class="tag">Kotlin</span>
+            <span class="tag">Firebase</span>
+          </div>
+        </div>
+      </div>
+
+       <!-- Machine Learning  -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="customerchurn.png" alt="Machine Learning Project">
+          <div class="project-overlay">
+            <a href="https://www.kaggle.com/code/sidraislam/customer-churn-prediction-ml-model" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3>Customer Churn Prediction</h3>
+          <p>Customer Churn Prediction is a machine learning project aimed at predicting which customers are likely to leave a service. The project involves data preprocessing, feature engineering, and model training using Python and TensorFlow. It demonstrates skills in data analysis, machine learning, and predictive modeling.</p>
+          <div class="project-tags">
+            <span class="tag">Kaggle</span>
+            <span class="tag">Python</span>
+            <span class="tag">ML</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications" class="section certifications-section">
+  <div class="section-content">
+    <h2 class="section-title">Certifications</h2>
+    <p class="section-subtitle">Professional certifications and achievements</p>
+
+    <div class="certifications-grid">
+      <!-- Certification 1 -->
+      <div class="certification-card">
+        <div class="certification-image">
+          <img src="api.png" alt="Web API Certificate">
+          <div class="certification-overlay">
+            <a href="google-it-support.png" class="certification-link" target="_blank">View Certificate <i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="certification-info">
+          <h3>Web API</h3>
+          <p class="certification-issuer">Linkedin</p>
+          <p class="certification-date">2025</p>
+          <p class="certification-description">Comprehensive training in IT support fundamentals, including troubleshooting, customer service, networking, operating systems, and security.</p>
+        </div>
+      </div>
+
+      <!-- Certification 2 -->
+      <div class="certification-card">
+        <div class="certification-image">
+          <img src="ai.png" alt="AI Foundations Machine Learning Certificate">
+          <div class="certification-overlay">
+            <a href="meta-frontend.png" class="certification-link" target="_blank">View Certificate <i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="certification-info">
+          <h3>AI Foundations Machine Learning</h3>
+          <p class="certification-issuer">Linkedin</p>
+          <p class="certification-date">2025</p>
+          <p class="certification-description">Professional certification covering HTML, CSS, JavaScript, React, and modern front-end development practices.</p>
+        </div>
+      </div>
+
+      <!-- Certification 3 -->
+      <div class="certification-card">
+        <div class="certification-image">
+          <img src="html.png" alt="HTML,CSS, JavaScript:Building the web">
+          <div class="certification-overlay">
+            <a href="ibm-data-analyst.png" class="certification-link" target="_blank">View Certificate <i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="certification-info">
+          <h3>HTML,CSS, JavaScript:Building the web</h3>
+          <p class="certification-issuer">Linkedin</p>
+          <p class="certification-date">2025</p>
+          <p class="certification-description">Data analysis skills including Excel, SQL, Python, data visualization, and business intelligence tools.</p>
+        </div>
+      </div>
+
+      <!-- Certification 4 -->
+      <div class="certification-card">
+        <div class="certification-image">
+          <img src="certificates-67.png" alt="Google AI Essentials Certificate">
+          <div class="certification-overlay">
+            <a href="google-ai-essentials.png" class="certification-link" target="_blank">View Certificate <i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="certification-info">
+          <h3>Google AI Essentials</h3>
+          <p class="certification-issuer">GDG</p>
+          <p class="certification-date">2025</p>
+          <p class="certification-description">Introduction to artificial intelligence concepts, machine learning fundamentals, and responsible AI practices.</p>
+        </div>
+      </div>
+
+         <!-- Certification 5 -->
+      <div class="certification-card">
+        <div class="certification-image">
+          <img src="python.png" alt="Python">
+          <div class="certification-overlay">
+            <a href="python.png" class="certification-link" target="_blank">View Certificate <i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+        <div class="certification-info">
+          <h3>Python Intermediate</h3>
+          <p class="certification-issuer">Sololearn</p>
+          <p class="certification-date">2024</p>
+          <p class="certification-description">Python programming skills including data structures, algorithms, and web development.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section contact-section">
+  <div class="parallax-bg contact-bg" data-parallax="0.3"></div>
+
+  <div class="section-content">
+    <h2 class="section-title">Let's Work Together</h2>
+    <p class="section-subtitle">Have a project in mind? Let's create something amazing</p>
+
+    <div class="contact-container">
+      <div class="contact-info">
+
+        <div class="info-card">
+          <i class="fas fa-envelope"></i>
+          <h3>Email</h3>
+          <p><a href="mailto:sidraislam234@gmail.com">sidraislam234@gmail.com</a></p>
+        </div>
+
+        <div class="info-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>Location</h3>
+          <p>Sharjah, UAE</p>
+        </div>
+
+      </div>
+
+      <form class="contact-form">
+        <div class="form-group">
+          <input type="text" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-content">
+
+    <div class="footer-section">
+      <h4>Sidra Islam</h4>
+      <p>Creative Computing Student</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Connect with Me</h4>
+      <div class="socials">
+        <a href="https://github.com/sidraislam48" class="social-link" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/sidra-islam-90b62b352/" class="social-link" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Sidra Islam. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
