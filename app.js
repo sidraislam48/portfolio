@@ -9,27 +9,54 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
-// ===== PARALLAX EFFECT =====
-window.addEventListener('scroll', () => {
+
+// ===== SCROLL EFFECTS (PARALLAX + NAVBAR + ACTIVE LINK) =====
+window.addEventListener("scroll", () => {
+
   const scrollY = window.scrollY;
-  
-  // Parallax background effect
-  document.querySelectorAll('[data-parallax]').forEach(element => {
-    const parallaxValue = element.dataset.parallax;
-    element.style.transform = `translateY(${scrollY * parallaxValue}px)`;
+
+  // PARALLAX
+  document.querySelectorAll("[data-parallax]").forEach(el => {
+    const speed = parseFloat(el.dataset.parallax);
+    const offset = Math.min(scrollY * speed, 150); // prevents large shifts
+    el.style.transform = `translateY(${offset}px)`;
   });
 
- // Navbar background effect on scroll
-  
-  const navbar = document.querySelector('.navbar');
-  if (scrollY > 50) {
-    navbar.style.background = 'rgba(15, 23, 42, 0.98)';
-    navbar.style.boxShadow = '0 5px 30px rgba(0, 0, 0, 0.5)';
-  } else {
-    navbar.style.background = 'rgba(15, 23, 42, 0.92)';
-    navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
+  // NAVBAR EFFECT
+  const navbar = document.querySelector(".navbar");
+  if (navbar) {
+    if (scrollY > 50) {
+      navbar.style.background = "rgba(15, 23, 42, 0.98)";
+      navbar.style.boxShadow = "0 5px 30px rgba(0,0,0,0.5)";
+    } else {
+      navbar.style.background = "rgba(15, 23, 42, 0.92)";
+      navbar.style.boxShadow = "0 2px 20px rgba(0,0,0,0.3)";
+    }
   }
-}); 
+
+  // ACTIVE NAV LINK
+  let current = "";
+  document.querySelectorAll("section").forEach(section => {
+    const sectionTop = section.offsetTop;
+    if (scrollY >= sectionTop - 200) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  document.querySelectorAll(".nav-link").forEach(link => {
+    link.style.color = "";
+    if (link.getAttribute("href").slice(1) === current) {
+      link.style.color = "#38bdf8";
+    }
+  });
+
+  // SCROLL TO TOP BUTTON
+  const scrollBtn = document.querySelector(".scroll-to-top");
+  if (scrollBtn) {
+    scrollBtn.classList.toggle("visible", scrollY > 400);
+  }
+
+});
 
 // ===== ANIMATION ON SCROLL =====
 const observerOptions = {
